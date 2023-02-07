@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>login page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+
+</head>
+
+<body >
+<div class="container" id="firstdiv">
+  
+    <div class="row justify-content-center " id="vertical">
+        <div class="col-4  p-5 rounded-4" id="color">
+
+        <form class="justify-content-center">
+          
+            <legend style="color: rgb(0, 46, 171);font-weight: 500; font-style: italic;">LOGIN</legend>
+            <div class="mb-3">
+              <label style="color: rgb(35, 101, 101);font-weight: 500; font-style: italic;" 
+              for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label style="color: rgb(35, 101, 101);font-weight: 500; font-style: italic;" 
+              for="pass" class="form-label">Password</label>
+              <input type="password" id="pass" class="form-control" placeholder="Enter your password">
+            </div>
+         
+            <button type="submit" id="btn" onclick="logIn()" class="btn border w-75 mx-5   ">login</button>
+          
+        </form>
+</div>
+      </div>
+        
+  </div>
+      <script >
+      
+      document.body.style.backgroundColor = "#8585E0";
+      var rowdiv=document.getElementById('vertical');
+      rowdiv.style.marginTop="10%";
+      var coldiv=document.getElementById('color');
+      coldiv.style.backgroundColor="white";
+      var btn =document.getElementById('btn');
+      btn.style.backgroundColor="#008fcc";
+      btn.style.color="white";
+      btn.style.outline="none";
+      var nameinput=document.getElementById('name');
+      var passinput=document.getElementById('pass');
+      function logIn() {
+        
+            if (nameinput.value== "admin" && passinput.value=="1234") {
+                alert("Login successfully");
+            }
+            else if(nameinput.value==""){
+              alert("please enter your name");
+            }
+            else  if(passinput.value==""){
+              alert("please enter your password");
+            }
+            else if (nameinput.value== "" && passinput.value=="") {
+                alert("please enter your data");
+            }
+            else {
+                alert("not registered");
+            }
+        }
+
+      </script>
+</body>
+
+</html>
